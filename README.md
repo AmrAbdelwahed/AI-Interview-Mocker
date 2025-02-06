@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Interview Mocker
 
-## Getting Started
+AI-powered technical interview preparation platform built with Next.js. Practice coding interviews with real-time AI feedback.
 
-First, run the development server:
+## Features
+- **AI Mock Interviews**: Simulated technical interviews using Gemini AI
+- **Real-Time Feedback**: Instant analysis of your interview responses
+- **User Authentication**: Secure login and session management with Clerk
+- **Responsive Design**: Optimized for all devices
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Frontend:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **React.js**: JavaScript library for building user interfaces.
+- **Next.js**:  React framework for server-side rendering and static site generation
+- **Tailwind CSS**: Utility-first CSS framework for styling.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Backend:
 
-## Learn More
+- **Node.js**: JavaScript runtime for building scalable network applications.
+- **Drizzle ORM**:  TypeScript ORM for SQL databases.
+- **PostgreSQL**: Relational database for data storage.
 
-To learn more about Next.js, take a look at the following resources:
+### APIs and Services:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Gemini AI**: Provides AI-driven responses for mock interviews.
+- **Clerk**:  User authentication and management service.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The application is now deployed in a Dockerized environment and can be accessed via the following URL:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**[AI Interview Mocker](https://ai-interview-mocker-amrabdelwaheds-projects.vercel.app/)**
+
+
+## Optional: Running the Application Locally with node.js and npm
+
+Follow these instructions to set up and run the project locally.
+
+### Prerequisites
+- Node.js (v14.x or later)
+- npm (v6.x or later)
+- PostgreSQL
+
+### Steps to Run Locally
+
+1. **Clone the Repository:**
+   ```bash
+    git clone https://github.com/AmrAbdelwahed/AI-Interview-Mocker.git
+    cd AI-Interview-Mocker
+    ```
+
+2. **Install Dependencies:**
+   ```bash
+    npm install
+    ```
+
+3. **Env variables configuration:**
+   ```bash
+    DATABASE_URL=postgresql://username:password@localhost:5432/database_name
+    NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_frontend_api
+    CLERK_API_KEY=your_clerk_api_key
+    GEMINI_API_KEY=your_gemini_api_key
+    ```
+
+- Replace username, password, database_name with your PostgreSQL credentials.
+- Replace your_clerk_frontend_api and your_clerk_api_key with your Clerk credentials.
+- Replace your_gemini_api_key with your Gemini AI API key.
+
+4. **Database Migration:** 
+   ```bash
+    npx drizzle-kit up
+    ```
+
+5. **Start the Development Server:**
+   ```bash
+    npm run dev
+    ```
+- Open your browser and navigate to http://localhost:3000.
+
+## Directory Structure
+    ```text
+    AI-Interview-Mocker/
+    ├── app/                # Next.js app directory
+    │   ├── components/     # React components
+    │   ├── pages/          # Next.js pages
+    │   ├── styles/         # CSS styles
+    │   └── ...             # Other Next.js specific folders
+    ├── drizzle/            # Drizzle ORM configurations and migrations
+    ├── public/             # Public assets
+    ├── utils/              # Utility functions
+    ├── .env.local          # Environment variables
+    ├── package.json        # npm package configuration
+    └── ...                 # Other configuration files
+    ```
+## License
+
+This project is licensed under the MIT License. See the **[LICENSE](https://github.com/AmrAbdelwahed/AI-Interview-Mocker/blob/main/LICENSE)**
+ file for details.
