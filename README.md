@@ -81,7 +81,6 @@ Follow these instructions to set up and run the project locally.
 - Open your browser and navigate to http://localhost:3000.
 
 ## Directory Structure
-    ```text
     AI-Interview-Mocker/
     ├── app/                # Next.js app directory
     │   ├── components/     # React components
@@ -94,8 +93,6 @@ Follow these instructions to set up and run the project locally.
     ├── .env.local          # Environment variables
     ├── package.json        # npm package configuration
     └── ...                 # Other configuration files
-    ```
 ## License
 
-This project is licensed under the MIT License. See the **[LICENSE](https://github.com/AmrAbdelwahed/AI-Interview-Mocker/blob/main/LICENSE)**
- file for details.
+This project is licensed under the MIT License. See the **[LICENSE](https://github.com/AmrAbdelwahed/AI-Interview-Mocker/blob/main/LICENSE)** file for details.

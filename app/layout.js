@@ -9,6 +9,15 @@ import {
 } from '@clerk/nextjs'
 import { Toaster } from "@/components/ui/sonner"
 
+const appearance = {
+  elements: {
+    card: 'bg-white shadow-lg rounded-lg p-6',
+    headerTitle: 'text-2xl font-bold text-center mb-4',
+    formFieldInput: 'border border-gray-300 rounded-md p-2 mb-4',
+    formButtonPrimary: 'bg-blue-500 text-white py-2 px-4 rounded-md',
+  },
+};
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +36,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider appearance={appearance}>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
           <Toaster />
