@@ -9,7 +9,7 @@ export default function Home() {
       <Image src="/logo.svg" width={200} height={100} alt="logo" className="mb-6" />
 
       {/* Headline */}
-      <h1 className="text-4xl font-bold text-primary mb-4">Welcome to AI Mock Interview</h1>
+      <h1 className="text-4xl font-bold text-primary mb-4">Welcome to MockView AI</h1>
       <p className="text-gray-600 max-w-xl mb-6">
         Prepare for your dream job with AI-powered mock interviews. Get instant feedback, improve your responses, and boost your confidence.
       </p>

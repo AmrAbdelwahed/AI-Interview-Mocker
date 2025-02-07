@@ -63,16 +63,6 @@ export default function SignInPage() {
         {/* Right section - Sign In */}
         <div className="flex w-full items-center justify-center lg:w-1/2">
           <div className="w-full max-w-md px-8">
-            {/* Mobile logo */}
-            <div className="mb-8 text-center lg:hidden">
-              <Image
-                src="/logo.svg"
-                width={200}
-                height={100}
-                alt="logo"
-                className="mb-6 mx-auto"
-              />
-            </div>
             
             {/* Logo on top of sign in card */}
             <div className="mb-8 text-center">
@@ -87,6 +77,7 @@ export default function SignInPage() {
             
             {/* Sign In Component */}
             <SignIn 
+              
               appearance={{
                 layout: {
                   showOptionalFields: false,
