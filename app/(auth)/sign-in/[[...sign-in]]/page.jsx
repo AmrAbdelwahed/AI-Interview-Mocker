@@ -77,6 +77,7 @@ export default function SignInPage() {
             
             {/* Sign In Component */}
             <SignIn 
+            
               
               appearance={{
                 layout: {
@@ -85,6 +86,7 @@ export default function SignInPage() {
                   socialButtonsPlacement: "top"
                 },
                 elements: {
+                  
                   rootBox: "w-full",
                   card: "shadow-lg p-0 w-full",
                   socialButtonsIconButton: "border border-gray-300 hover:bg-gray-50",
@@ -93,6 +95,8 @@ export default function SignInPage() {
                   formFieldInput: 
                     "w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500",
                   formFieldLabel: "font-lg text-gray-700",
+                  formFieldInputShowPasswordButton: "absolute right-2 top-1/2 transform -translate-y-4",
+                  
                   footer: "hidden",
                   footerAction: "hidden",
                   card: `

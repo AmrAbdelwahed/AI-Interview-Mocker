@@ -102,6 +102,7 @@ export default function Page() {
                       "w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500",
                     formFieldLabel: "font-lg text-gray-700",
                     footer: "hidden",
+                    formFieldInputShowPasswordButton: "absolute right-2 top-1/2 transform -translate-y-4",
                     footerAction: "hidden",
                     card: `
                       w-full 
