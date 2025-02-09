@@ -61,13 +61,16 @@ function Interview({params}) {
             <Button variant='ghost' className='w-full' onClick={()=>setWebCamEnabled(true)}> Enable Web Cam and Microphone</Button>
             </>
             }
-        </div>
-        </div>
-
-        <div className='flex justify-end items-end'>
+            
+            <div className='flex justify-end items-end mt-12'>
             <Link href={`/dashboard/interview/${params.interviewId}/start`}>
                 <Button >Start Interview</Button>
             </Link>
+        </div>
+        
+        </div>
+
+        
             
         </div>
         
