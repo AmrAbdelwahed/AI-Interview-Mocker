@@ -46,7 +46,7 @@ function AddNewInterview() {
         if(MockJsonResp){
             const resp = await db.insert(MockInterview)
             .values({
-                mockId:'mock-'+uuidv4(),
+                mockId:uuidv4(),
                 jsonMockResp:MockJsonResp,
                 jobPosition:jobPosition,
                 jobDesc:jobDesc,

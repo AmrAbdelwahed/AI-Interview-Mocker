@@ -68,8 +68,8 @@ export default function SignInPage() {
             <div className="mb-8 text-center">
               <Image
                 src="/logo.svg"
-                width={150}
-                height={75}
+                width={225}
+                height={150}
                 alt="logo"
                 className="mb-6 mx-auto"
               />
@@ -86,42 +86,39 @@ export default function SignInPage() {
                   socialButtonsPlacement: "top"
                 },
                 elements: {
-                  
+                  /* Outer container */
                   rootBox: "w-full",
-                  card: "shadow-lg p-0 w-full",
-                  socialButtonsIconButton: "border border-gray-300 hover:bg-gray-50",
-                  formButtonPrimary: 
-                    "w-full bg-blue hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2",
-                  formFieldInput: 
-                    "w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500",
-                  formFieldLabel: "font-lg text-gray-700",
-                  formFieldInputShowPasswordButton: "absolute right-2 top-1/2 transform -translate-y-4",
+             
+                  /* Sign-in card */
+                  card: "w-full max-w-md bg-white shadow-lg rounded-lg p-6",
+            
+                  /* Title */
+                  headerTitle: "text-2xl font-semibold text-gray-900 text-center",
+            
+                  /* Form */
+                  form: "w-full space-y-4",
+            
+                  /* Input Fields */
+                  formFieldInput: "w-full rounded-lg border border-gray-300 p-3 focus:ring-blue-500 focus:border-blue-500",
+                  formFieldLabel: "block text-sm font-medium text-gray-700",
                   
+                  /* Password Eye Button (Fixed) */
+                  formFieldInputShowPasswordButton: "absolute right-2 top-1/2 transform -translate-y-4",
+            
+                  /* Submit Button */
+                  formButtonPrimary: "w-full bg-[#4845D2] hover:bg-[#3b38b0] text-white font-semibold py-3 px-4 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#4845D2] focus:ring-offset-2",
+            
+                  /* Social Login Buttons */
+                  socialButtons: "flex justify-center space-x-4",
+                  socialButtonsIconButton: "border border-gray-300 rounded-lg p-2 hover:bg-gray-400",
+            
+                  /* Footer (Hide Sign Up/Help links) */
                   footer: "hidden",
                   footerAction: "hidden",
-                  card: `
-                    w-full 
-                    bg-white 
-                    shadow-none 
-                    p-10
-                  `,
-                  main: `
-                    w-full
-                    p-0
-                  `,
-                  form: `
-                    w-full 
-                    space-y-2
-                  `,
-                  socialButtons: `
-                    flex 
-                    justify-center 
-                    space-x-4
-                  `,
                 },
                 variables: {
                   borderRadius: '0.5rem',
-                  colorPrimary: '#2563eb',
+                  colorPrimary: '#4845D2',
                   colorText: '#111827',
                   colorTextSecondary: '#4b5563',
                   colorBackground: '#ffffff',

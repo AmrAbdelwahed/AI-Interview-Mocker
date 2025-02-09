@@ -29,7 +29,7 @@ AI-powered technical interview preparation platform built with Next.js. Practice
 
 ## Deployment
 
-The application is now deployed in a Dockerized environment and can be accessed via the following URL:
+The application is now deployed and can be accessed via the following URL:
 
 
 **[AI Interview Mocker](https://ai-interview-mocker-amrabdelwaheds-projects.vercel.app/)**
