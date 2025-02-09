@@ -2,11 +2,14 @@
 
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-import { UserButton } from '@clerk/nextjs'
+import { SignOutButton, UserButton } from '@clerk/nextjs'
 import { usePathname } from 'next/navigation'
+import { useClerk } from '@clerk/nextjs'
+
 
 function Header() {
     const path = usePathname()
+    const { signOut } = useClerk()
     
     useEffect(() => {
         console.log(path)
@@ -29,6 +32,8 @@ function Header() {
             <UserButton.Action label="signOut" />
         </UserButton.MenuItems>
         </UserButton>
+        <button onClick={() => signOut({ redirectUrl: '/' })}>Sign out</button>
+        <SignOutButton></SignOutButton>
     </div>
   )
 }
