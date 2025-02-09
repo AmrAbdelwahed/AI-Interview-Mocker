@@ -24,7 +24,11 @@ function Header() {
             <li className={`hover:text-primary hover:font-bold transition cursor-pointer 
                 ${path == '/dashboard/how' && 'text-primary font-bold'} `}>How it Works?</li> */}
         </ul>
-        <UserButton />
+        <UserButton>
+        <UserButton.MenuItems>
+            <UserButton.Action label="signOut" />
+        </UserButton.MenuItems>
+        </UserButton>
     </div>
   )
 }
