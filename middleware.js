@@ -1,19 +1,12 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
-import { createRouteMatcher } from "@clerk/nextjs/server";
+import { createRouteMatcher } from '@clerk/nextjs/server'
 
-const isProtectedRoute = createRouteMatcher(["/dashboard(.*)", "/forum(.*)"]);
+
+const isProtectedRoute = createRouteMatcher(['/dashboard(.*)', '/forum(.*)'])
 
 export default clerkMiddleware(async (auth, req) => {
-    if (isProtectedRoute(req)) {
-        const { userId } = auth();
-        if (!userId) {
-            // Redirect to sign-in page if unauthenticated
-            return new Response(null, { status: 307, headers: { Location: "/sign-in" } });
-        }
-        // Protect the route for authenticated users
-        await auth.protect();
-    }
-});
+    if (isProtectedRoute(req)) await auth.protect()
+  })
 
 export const config = {
   matcher: [
